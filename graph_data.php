@@ -32,7 +32,7 @@ $CacheFile = sys_get_temp_dir() . '/cotv_graph_' . md5(GithubRepo) . '.json';
 $CacheAge = is_file($CacheFile) ? time() - filemtime($CacheFile) : PHP_INT_MAX;
 $Force = !empty($_GET['refresh']);
 // "Odśwież" omija cache, ale nie częściej niż co 15 s (ochrona limitu GitHub API)
-$MaxAge = $Force ? 15 : GithubCacheSeconds;
+$MaxAge = $Force ? 45 : GithubCacheSeconds;
 
 if ($CacheAge < $MaxAge) {
   $Cached = json_decode(file_get_contents($CacheFile), true);
@@ -134,7 +134,7 @@ $MaxPagesDefault = 20;
 foreach ($Branches as $B) {
   if (isset($Commits[$B['sha']])) continue;   // czubek tego brancha już znamy (np. wcześniej scalony)
   $IsDefault = $B['default'];
-  $PerPage = $IsDefault ? 100 : 50;
+  $PerPage = $IsDefault ? 300 : 150;
   $MaxPages = $IsDefault ? $MaxPagesDefault : 6;
 
   for ($Page = 1; $Page <= $MaxPages; $Page++) {

@@ -10,7 +10,7 @@ $DataUrl = 'graph_data.php' . ($Demo ? '?demo=1' : '');
 <html lang="pl">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Graf commitów</title>
+<title>Repozytorium</title>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="graph-page">
@@ -21,7 +21,7 @@ $DataUrl = 'graph_data.php' . ($Demo ? '?demo=1' : '');
       <a href="tasks.php">Zadania</a>
       <a href="my_tasks.php">Moje zadania</a>
       <a href="history.php">Historia</a>
-      <a href="graph.php" class="active">Graf commitów</a>
+      <a href="graph.php" class="active">Repozytorium</a>
       <?php if ((int)$User['IsAdmin'] === 1): ?><a href="admin.php" class="admin-link">Panel administracji</a><?php endif; ?>
     </nav>
   </div>

@@ -30,7 +30,7 @@ $Total = array_sum(array_column($Segments, 'count'));
       <a href="tasks.php">Zadania</a>
       <a href="my_tasks.php">Moje zadania</a>
       <a href="history.php">Historia</a>
-      <a href="graph.php">Graf commitów</a>
+      <a href="graph.php">Repozytorium</a>
       <?php if ((int)$User['IsAdmin'] === 1): ?><a href="admin.php" class="admin-link">Panel administracji</a><?php endif; ?>
     </nav>
     <?php endif; ?>

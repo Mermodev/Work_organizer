@@ -150,7 +150,7 @@ function admin_sort_select($Cols, $Labels, $CurCol, $CurDir, $Tab) {
       <a href="tasks.php">Zadania</a>
       <a href="my_tasks.php">Moje zadania</a>
       <a href="history.php">Historia</a>
-      <a href="graph.php">Graf commitów</a>
+      <a href="graph.php">Repozytorium</a>
       <a href="admin.php" class="admin-link active">Panel administracji</a>
     </nav>
   </div>
