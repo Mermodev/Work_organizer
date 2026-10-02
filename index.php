@@ -8,7 +8,7 @@ $Segments = [
   ['label' => 'W trakcie realizacji', 'key' => 'in_progress', 'color' => '#e8b93f', 'count' => $Counts['in_progress']],
   ['label' => 'Czekające na dodanie', 'key' => 'awaiting_merge', 'color' => '#22d3ee', 'count' => $Counts['awaiting_merge']],
   ['label' => 'Porzucone / usunięte', 'key' => 'abandoned', 'color' => '#f0616d', 'count' => $Counts['abandoned'] + $Counts['deleted']],
-  ['label' => 'Czekające na akceptację', 'key' => 'pending', 'color' => '#4fa8ff', 'count' => $Counts['pending']],
+  ['label' => 'Czekające na akceptację', 'key' => 'pending', 'color' => '#df43eb', 'count' => $Counts['pending']],
   ['label' => 'Inne', 'key' => 'other', 'color' => '#7c8697', 'count' => $Counts['other'] + $Counts['todo']],
 ];
 $Total = array_sum(array_column($Segments, 'count'));
